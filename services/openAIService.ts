@@ -3,7 +3,7 @@ import OpenAI from 'openai';
 export class OpenAIService {
 
     private openai = new OpenAI({
-        apiKey: "", // OPENROUTER
+        apiKey: process.env.OPENROUTER_API_KEY, // OPENROUTER
         baseURL: "https://openrouter.ai/api/v1",
     });
     private messages: any = [];
